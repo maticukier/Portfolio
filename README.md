@@ -8,7 +8,7 @@ Este proyecto es un portafolio personal que incluye las siguientes secciones:
 - **Información (My Info):** Descripción de habilidades técnicas, experiencia y estudios.
 - **Contacto (Contact):** Formulario para contactar conmigo.
 
-##Caracteristicas
+## Caracteristicas
 - **Responsivo:** Adaptable a cualquier tamaño de pantalla.
 - **Moderno y minimalista:** Diseño limpio y enfocado en la usabilidad.
 - **Animaciones:** Efectos suaves y profesionales para mejorar la experiencia del usuario.
