@@ -8,31 +8,45 @@ export default function Hero() {
         {/* Left */}
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-8">
-            <span className="inline-flex items-center gap-1.5 text-xs text-zinc-500 border border-white/[0.06] rounded-full px-3 py-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+            <span className="inline-flex items-center gap-1.5 text-xs border rounded-full px-3 py-1"
+              style={{ color: "rgba(96,165,250,0.8)", borderColor: "rgba(59,130,246,0.25)", background: "rgba(37,99,235,0.08)" }}>
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-400" />
               Buenos Aires, Argentina
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-medium text-white leading-[1.1] tracking-tight mb-3">
-            Matias Cukier
+          {/* Gradient name */}
+          <h1 className="text-5xl sm:text-7xl font-medium leading-[1.05] tracking-tight mb-4"
+            style={{ background: "linear-gradient(135deg, #fff 30%, #60a5fa 65%, #22d3ee 100%)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", backgroundClip: "text" }}>
+            Matias<br />Cukier
           </h1>
 
-          <p className="text-2xl sm:text-3xl font-medium text-blue-400 mb-6">
-            Full Stack Developer
-          </p>
+          <div className="flex items-center gap-3 mb-6">
+            <div className="h-px w-8" style={{ background: "linear-gradient(90deg, #3b82f6, transparent)" }} />
+            <p className="text-lg font-medium" style={{ color: "#60a5fa" }}>
+              Full Stack Developer
+            </p>
+          </div>
 
-          <p className="text-zinc-400 text-base sm:text-lg max-w-xl leading-relaxed mb-10">
-            Building fast, modern web apps and AI integrations with React, Next.js & TypeScript. Currently at{" "}
-            <span className="text-zinc-300">Accenture</span>, developing AI agents on Salesforce Agentforce.
+          <p className="text-zinc-400 text-base sm:text-lg max-w-lg leading-relaxed mb-10">
+            Building fast, modern web apps and AI integrations. React, Next.js & TypeScript. Currently at{" "}
+            <span className="text-zinc-200 font-medium">Accenture</span>, developing AI agents on Salesforce Agentforce.
           </p>
 
           <div className="flex flex-wrap gap-3">
-            <a href="#work" className="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm rounded-full transition-colors font-medium">
+            <a href="#work"
+              className="px-6 py-2.5 text-sm font-medium text-white rounded-full transition-all"
+              style={{ background: "linear-gradient(135deg, #2563eb, #0891b2)", boxShadow: "0 0 20px rgba(37,99,235,0.4)" }}>
               View my work
             </a>
+            <a href="https://www.linkedin.com/in/matias-cukier-034004230/" target="_blank" rel="noopener noreferrer"
+              className="px-6 py-2.5 text-sm text-zinc-300 rounded-full transition-all hover:text-white"
+              style={{ border: "1px solid rgba(255,255,255,0.1)", background: "rgba(255,255,255,0.03)" }}>
+              LinkedIn ↗
+            </a>
             <a href="https://github.com/maticukier" target="_blank" rel="noopener noreferrer"
-              className="px-5 py-2.5 border border-white/10 hover:border-white/20 text-zinc-400 hover:text-white text-sm rounded-full transition-all">
+              className="px-6 py-2.5 text-sm text-zinc-400 rounded-full transition-all hover:text-white"
+              style={{ border: "1px solid rgba(255,255,255,0.08)" }}>
               GitHub ↗
             </a>
           </div>
@@ -40,21 +54,28 @@ export default function Hero() {
 
         {/* Right — photo */}
         <div className="flex justify-center lg:justify-end shrink-0">
-          <div className="relative w-56 h-56 sm:w-64 sm:h-64">
-            <div className="absolute -inset-1 rounded-full border border-amber-400/20" />
-            <div className="absolute -inset-2 rounded-full border border-blue-500/10" />
-            <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-blue-500/30">
+          <div className="relative w-56 h-56 sm:w-72 sm:h-72">
+            {/* Glow rings */}
+            <div className="absolute -inset-3 rounded-full"
+              style={{ border: "1px solid rgba(59,130,246,0.2)", boxShadow: "0 0 30px rgba(37,99,235,0.15)" }} />
+            <div className="absolute -inset-6 rounded-full"
+              style={{ border: "1px solid rgba(6,182,212,0.1)" }} />
+            {/* Photo */}
+            <div className="relative w-full h-full rounded-full overflow-hidden"
+              style={{ border: "2px solid rgba(59,130,246,0.4)", boxShadow: "0 0 40px rgba(37,99,235,0.2)" }}>
               <Image src="/avatar.png" alt="Matias Cukier" fill className="object-cover object-top" priority />
             </div>
-            <div className="absolute -bottom-2 -right-2 bg-[#060d1c] border border-blue-500/20 rounded-full px-3 py-1 flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
-              <span className="text-xs text-zinc-400">@ Accenture</span>
+            {/* Badge */}
+            <div className="absolute -bottom-3 -right-3 rounded-full px-3 py-1.5 flex items-center gap-1.5"
+              style={{ background: "#060d1c", border: "1px solid rgba(59,130,246,0.3)", boxShadow: "0 0 12px rgba(37,99,235,0.2)" }}>
+              <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
+              <span className="text-xs text-zinc-300">@ Accenture</span>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="mt-16 flex items-center gap-2 text-zinc-600 text-xs">
+      <div className="mt-16 flex items-center gap-2 text-xs" style={{ color: "rgba(96,165,250,0.4)" }}>
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
           <path d="M7 2v10M3 8l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
